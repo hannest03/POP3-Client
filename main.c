@@ -1,5 +1,11 @@
 ﻿#include <stdio.h>
 
+#include "input.h"
+
 int main(){
-	printf("Hello World\n");
+	
+	char* username = getMail();
+
+	printf("%s",username);
+
 }
