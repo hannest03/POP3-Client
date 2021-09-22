@@ -1,3 +1,3 @@
 # POP3-Client
 
-Reads Mails send with the SMTP Protocol
+Reads mails send with the SMTP Protocol
