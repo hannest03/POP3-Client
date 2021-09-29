@@ -91,7 +91,7 @@ char* getMail(){
 	char* list = "List\n";
         char* exit = "Exit\n";
 
-	printf("Lise von Mails mit List, Mail auslesen mit gewünschter Nummer: \n");
+	printf("Liste von Mails mit List, Mail auslesen mit gewünschter Nummer: \n");
 
 	while(1){
 		char* option = readInput();
