@@ -36,7 +36,6 @@ int main(){
 	//LIST / RERTR
 	while(1){
 
-
 		char *mail = getMail();
 
 		if(mail==NULL){
