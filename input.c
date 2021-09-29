@@ -89,7 +89,8 @@ char* readRetrN(char *mail){
 char* getMail(){
 
 	char* list = "List\n";
-        char* exit = "Exit\n";
+  char* exit = "Exit\n";
+	char* quit = "Quit\n";
 
 	printf("Liste von Mails mit List, Mail auslesen mit gewünschter Nummer: \n");
 
@@ -108,7 +109,7 @@ char* getMail(){
 
 		}else
 
-		if(!strcasecmp(option,exit)){
+		if(!strcasecmp(option,exit) || !strcasecmp(option, quit)){
 
 			return NULL;
 
