@@ -40,7 +40,7 @@ char* readInput(){
 
 char* readUsername(){
 
-	printf("Username: ");
+	printf("Benutzername: ");
 
 	char *username = readInput();
 
@@ -55,7 +55,7 @@ char* readUsername(){
 
 char* readPassword(){
 
-	printf("Password: ");
+	printf("Passwort: ");
 	
 	char *password = readInput();
 
@@ -77,14 +77,9 @@ char* readList(){
 
 }
 
-char* readRetrN(int mail){
+char* readRetrN(char *mail){
 
-	char mai[3];
-       	mai[0] = (mail+'0');
-	mai[1] = '\n';
-	mai[2] = 0;
-
-	char *retrN = concat(RETRN, mai);
+	char *retrN = concat(RETRN, mail);
 	
 	return retrN;	
 
@@ -96,24 +91,24 @@ char* getMail(){
 	char* list = "List\n";
         char* exit = "Exit\n";
 
-	printf("List of mails with List,\nSpecific mail with number: ");
+	printf("Lise von Mails mit List, Mail auslesen mit gewünschter Nummer: \n");
 
 	while(1){
 		char* option = readInput();
 
-		if(!strcmp(option,list)){
+		if(!strcasecmp(option,list)){
 
 			return readList();
 
 		}else	
 
 		if(atoi(option)){
-			int mail = atoi(option);
-			return readRetrN(mail);
+
+			return readRetrN(option);
 
 		}else
 
-		if(!strcmp(option,exit)){
+		if(!strcasecmp(option,exit)){
 
 			return NULL;
 

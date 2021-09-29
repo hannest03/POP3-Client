@@ -6,7 +6,7 @@ char* readInput();
 char* readUsername();
 char* readPassword();
 char* readList();
-char* readRetrN(int mail);
+char* readRetrN(char *mail);
 char* getMail();
 
 #endif
