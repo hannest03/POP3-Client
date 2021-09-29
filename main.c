@@ -25,7 +25,6 @@ int main(){
 	char *password = readPassword();
 
 	if(pop_sendCommand(password)==NULL){
-
 		printf("Fehler mit dem Passwort!\n");
 		free(password);
 		exit(-1);

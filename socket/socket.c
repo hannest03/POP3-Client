@@ -75,6 +75,7 @@ void pop_close(){
 }
 
 char* pop_sendCommand(char* command){
+
 	send(socket_id, command, strlen(command), 0);
 
 	int size_buffer = sizeof(char) * 1000;

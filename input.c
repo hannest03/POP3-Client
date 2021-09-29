@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 
 const char *USER = "USER ";
 const char *PASSWORD = "PASS ";
@@ -55,16 +56,13 @@ char* readUsername(){
 
 char* readPassword(){
 
-	printf("Passwort: ");
-	
-	char *password = readInput();
-
+	char *password = getpass("Passwort: ");
+	password = concat(password, "\n");
 	char *command = concat(PASSWORD,password);
 
 	free(password);
 
 	return command;
-	
 }
 
 char* readList(){
